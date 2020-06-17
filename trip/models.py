@@ -10,3 +10,6 @@ class Destinations(models.Model):
 
     def __str__(self):
       return self.place
+    
+    def get_absolute_url(self):
+        return reverse('destination_detail', args=[str(self.id)])

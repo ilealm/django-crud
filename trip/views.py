@@ -6,12 +6,12 @@ class DestinationsListView(ListView):
     template_name = "destination_list.html"
     model = Destinations
 
+
 class DestinationsDetailView(DetailView):
     template_name = "destination_detail.html"
     model = Destinations
 
-# class DestinationsUpdatelView(UpdateView):
-#     template_name = "destiation_Update.html"
-#     model = Destinations
-
-
+class DestinationsCreateView(CreateView):
+    template_name = "destination_create.html"
+    model = Destinations
+    fields = ['author', 'place', 'location', 'summary']
