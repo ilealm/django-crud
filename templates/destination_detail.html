@@ -2,6 +2,11 @@
 
 {% block content %}
 
-<h1>Destination Detail</h1>
+<h3>{{ destinations.place }}</h3>
+<h4>Location: {{ destinations.location }}</h4>
+<p>Summary: {{ destinations.summary }}</p>
+
+<a href="{% url 'destination_update' destinations.pk %}">+ Edit destination</a>
+<a href="{% url 'destination_delete' destinations.pk %}">+ Delete destination</a>
 
 {% endblock content %}
